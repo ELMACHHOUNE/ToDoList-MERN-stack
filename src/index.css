@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.add-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 6px 12px; /* Reduced padding for smaller text */
+  border: none; /* Remove the default border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+
+}
+
+.add-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.add-btn:active {
+  background-color: #387c39; /* Even darker green when button is pressed */
+  transform: scale(0.98); /* Slightly shrink the button */
+}
+
+.add-btn:focus {
+  outline: none; /* Remove the default focus outline */
+}
