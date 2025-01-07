@@ -12,7 +12,7 @@ function App() {
   // Fetching Todos from the backend
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/todos")
+      .get("https://todolist-mern-stack-dthl.onrender.com/api/todos")
       .then((response) => {
         setTodos(response.data);
       })
@@ -25,7 +25,10 @@ function App() {
   // Add new todo
   const addTodo = (text) => {
     axios
-      .post("http://localhost:5000/api/todos", { text, completed: false })
+      .post("https://todolist-mern-stack-dthl.onrender.com/api/todos", {
+        text,
+        completed: false,
+      })
       .then((response) => {
         setTodos([...todos, response.data]);
       })
@@ -38,7 +41,7 @@ function App() {
   // Remove todo
   const removeTodo = (id) => {
     axios
-      .delete(`http://localhost:5000/api/todos/${id}`)
+      .delete(`https://todolist-mern-stack-dthl.onrender.com/api/todos/${id}`)
       .then(() => {
         setTodos(todos.filter((todo) => todo._id !== id));
       })
@@ -51,7 +54,9 @@ function App() {
   // Mark todo as complete
   const completeTodo = (id) => {
     axios
-      .put(`http://localhost:5000/api/todos/${id}`, { completed: true })
+      .put(`https://todolist-mern-stack-dthl.onrender.com/api/todos/${id}`, {
+        completed: true,
+      })
       .then(() => {
         setTodos(
           todos.map((todo) =>
@@ -67,7 +72,9 @@ function App() {
 
   const updateTodo = (id, text) => {
     axios
-      .put(`http://localhost:5000/api/todos/${id}`, { text }) // <-- This URL might not be correct
+      .put(`https://todolist-mern-stack-dthl.onrender.com/api/todos/${id}`, {
+        text,
+      }) // <-- This URL might not be correct
       .then(() => {
         setTodos(
           todos.map((todo) => (todo._id === id ? { ...todo, text } : todo))
